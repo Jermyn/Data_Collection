@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Map View</title>
+  <meta charset="utf-8"/>
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+  <link href="mapview.css" rel="stylesheet">
+  <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+</head>
+<body>
+  <div id="mapid"></div>
+
+  <script type="text/javascript">
+    var mymap = L.map('mapid').setView([51.505, -0.09], 13);
+
+    L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/streets-v9/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiamVybXoiLCJhIjoiY2ozd2tuMzF4MDA0bjJ3bXNtNXp0amNtZSJ9.vDgJge7HFCAJvIp97qrzSg', {
+    maxZoom: 18,
+    accessToken: 'pk.eyJ1IjoiamVybXoiLCJhIjoiY2ozd2tuMzF4MDA0bjJ3bXNtNXp0amNtZSJ9.vDgJge7HFCAJvIp97qrzSg'
+}).addTo(mymap);
+
+    var patient = L.marker([51.5, -0.09]).addTo(mymap);
+    patient.bindPopup('Tin');
+
+  </script>
+
+</body>
+</html>
