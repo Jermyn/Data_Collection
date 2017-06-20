@@ -15,6 +15,7 @@ from bokeh.models.widgets import DataTable, DateFormatter, TableColumn, Toggle, 
 from bokeh.charts import Scatter
 
 
+
 devList = []
 selectList = []
 dict_contact = {}

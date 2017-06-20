@@ -46,7 +46,7 @@ def office_POI():
 
 def ward5_POI():
 	poi_list = []
-	query_poi = 'query{map (id:"ward5") {graph}}'
+	query_poi = 'query{map (id:"ward5678") {graph}}'
 
 	r = requests.get("http://137.132.165.139/graphql", {"query":query_poi})
 	str_poi = r.text
