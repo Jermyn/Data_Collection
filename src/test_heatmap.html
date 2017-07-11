@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title></title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='http://cdn.leafletjs.com/leaflet-0.7/leaflet.js'></script>
+    <script src="http://openlayers.org/api/OpenLayers.js"></script>
+    <link href="mapview.css" rel="stylesheet">
+    <link href='http://cdn.leafletjs.com/leaflet-0.7/leaflet.css' rel='stylesheet' />
+</head>
+<body>
+
+<div id="map1"></div>
+<script src="https://raw.githubusercontent.com/mholt/PapaParse/master/papaparse.min.js"></script>
+<input type="file" id="csv-file" name="files"/>
+<input type="file" id="csv-file2" name="files"/>
+<script src='/Users/jermz/Desktop/eclipse-workspace/Leaflet.heat-gh-pages/dist/leaflet-heat.js'></script>
+<script src="http://leaflet.github.io/Leaflet.markercluster/example/realworld.10000.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+  <script src="http://jquery-csv.googlecode.com/git/src/jquery.csv.js"></script>
+  <script src="https://d3js.org/d3-collection.v1.min.js"></script>
+<script src="https://d3js.org/d3-dispatch.v1.min.js"></script>
+<script src="https://d3js.org/d3-dsv.v1.min.js"></script>
+<script src="https://d3js.org/d3-request.v1.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/mootools/1.2.4/mootools-yui-compressed.js"></script>
+<!-- <div id="mapo" style="height: 250px; width:250px; border: 1px solid red;"></div> -->
+<!-- <button id="done">Done moving current marker</button> -->
+<script>
+scale = 67.2;
+
+var map1 = L.map('map1', {
+    crs: L.CRS.Simple,
+    attributionControl: false,
+    // maxBounds: new L.LatLngBounds([-0.1127410172131249*scale,-0.053520224662321425*scale], [0.29993293298224444*scale,0.2396765465825439*scale])
+    maxBounds: new L.LatLngBounds([-70, -70], [70, 70])
+});
+
+// var currentMarker;
+// var markers = []
+var center_w = (-0.1127410172131249*scale) + ((0.29993293298224444*scale - (-0.1127410172131249*scale))/2.0)
+var center_h = (-0.053520224662321425*scale) + ((0.2396765465825439*scale - (-0.053520224662321425*scale))/2.0)
+// var heat = L.heatLayer([
+//           [5.358543576179305, 13.678096798577277, 12],
+          // [2.4306795603287568, 8.308504678941933, 15]], {radius: 30}).addTo(map1)
+// addressPoints = addressPoints.map(function (p) { return [p[0], p[1]]; });
+
+
+// function deleteMarker(lng, lat) {
+//   var markers = localStorage.getItem("markers");
+//   markers = JSON.parse(markers);
+//    for(var i=0;i<markers.length;i++){
+//     latlng = JSON.parse(markers[i]);
+    
+//     if(latlng.lat == lat && latlng.lng == lng)
+//     {
+//         markers.splice(i,1);
+      
+//     }
+//   }
+//   localStorage.setItem('markers', JSON.stringify(markers));
+// }
+
+// var redmarker = L.icon({
+//   iconUrl: 'http://icons.iconarchive.com/icons/paomedia/small-n-flat/48/map-marker-icon.png',
+
+//   iconSize: [48, 48], // size of the icon
+//   iconAnchor: [24, 48], // point of the icon which will correspond to marker's location
+//   popupAnchor: [-2, -48] // point from which the popup should open relative to the iconAnchor
+// });
+
+
+// var popup = L.popup();
+
+// function onMapClick(e) {
+
+//   var geojsonFeature = {
+//     "type": "Feature",
+//     "properties": {},
+//     "geometry": {
+//       "type": "Point",
+//       "coordinates": [e.latlng.lat, e.latlng.lng]
+//     }
+//   }
+
+// var marker;
+
+//   L.geoJson(geojsonFeature, {
+
+//     pointToLayer: function(feature, latlng) {
+
+//       marker = L.marker(e.latlng, {
+
+//         title: "Resource Location",
+//         alt: "Resource Location",
+//         riseOnHover: true,
+//         draggable: true,
+//         icon: redmarker
+
+
+//       }).bindPopup("<<span>X: " + e.latlng.lng + ", Y: " + e.latlng.lat + "</span><br><a href='#' id='marker-delete-button' onclick='deleteMarker(" + e.latlng.lng + "," + e.latlng.lat + ");map.removeLayer(this);'>Delete marker</a>");
+
+//       marker.on("popupopen", onPopupOpen);
+
+//       // Begin store markers in local storage
+//       storeMarker(e.latlng);
+//       // End store markers in local storage
+
+//       return marker;
+//     }
+//   }).addTo(map1);
+// }
+
+// function onPopupOpen() {
+//   var tempMarker = this;
+
+//   $("#marker-delete-button:visible").click(function() {
+//     map1.removeLayer(tempMarker);
+//   });
+// }
+
+// /// Load markers
+// function loadMarkers() {
+//   var markers = localStorage.getItem("markers");
+//   if (!markers) return;
+//   markers = JSON.parse(markers);
+//   markers.forEach(function(entry) {
+//     latlng = JSON.parse(entry);
+//     var geojsonFeature = {
+//       "type": "Feature",
+//       "properties": {},
+//       "geometry": {
+//         "type": "Point",
+//         "coordinates": [latlng.lat, latlng.lng]
+//       }
+//     }
+
+//     var marker;
+
+//     L.geoJson(geojsonFeature, {
+
+//       pointToLayer: function(feature) {
+
+//         marker = L.marker(latlng, {
+
+//           title: "Resource Location",
+//           alt: "Resource Location",
+//           riseOnHover: true,
+//           draggable: true,
+//           icon: redmarker
+
+
+//         }).bindPopup("<<span>X: " + latlng.lng + ", Y: " + latlng.lat + "</span><br><a href='#' id='marker-delete-button' onclick='deleteMarker(" + latlng.lng + "," + latlng.lat + ");map.removeLayer(this);'>Delete marker</a>");
+
+//         marker.on("popupopen", onPopupOpen);
+
+//         return marker;
+//       }
+//     }).addTo(map1);
+//   });
+
+
+// }
+//   /// Store markers
+// function storeMarker(marker) {
+//   var markers = localStorage.getItem("markers");
+//   if (!markers) {
+//     markers = new Array();
+//     console.log(marker);
+//     markers.push(JSON.stringify(marker));
+//   } else {
+//     markers = JSON.parse(markers);
+//     markers.push(JSON.stringify(marker));
+//   }
+  
+//   localStorage.setItem('markers', JSON.stringify(markers));
+// }
+
+// map1.on('click', onMapClick);
+
+// loadMarkers();
+// map1.on("click", function (event) {
+//     if (currentMarker) {
+//         currentMarker._icon.style.transition = "transform 0.3s ease-out";
+//         currentMarker._shadow.style.transition = "transform 0.3s ease-out";
+        
+//         currentMarker.setLatLng(event.latlng);
+        
+//         setTimeout(function () {
+//             currentMarker._icon.style.transition = null;
+//             currentMarker._shadow.style.transition = null;
+//         }, 300);
+//         return;
+//     }
+    
+//     currentMarker = L.marker(event.latlng, {
+//         draggable: true
+//     }).addTo(map1).on("click", function () {
+//         event.originalEvent.stopPropagation();
+//     });
+// });
+
+// document.getElementById("done").addEventListener("click", function () {
+//     alert(currentMarker.getLatLng());
+//     var geojsonFeature = {
+//     "type": "Feature",
+//     "properties": {},
+//     "geometry": {
+//       "type": "Point",
+//       "coordinates": [e.latlng.lat, e.latlng.lng]
+//     }}
+//     currentMarker = null;
+// });
+// var w = 0.29993293298224444*scale - (-0.1127410172131249*scale);
+//     h = 0.2396765465825439*scale - (-0.053520224662321425*scale);
+//     url = 'https://image.ibb.co/eAuMNk/ward5.png';
+
+// var southWest = map1.unproject([0, h], map1.getMaxZoom());
+// var northEast = map1.unproject([w, 0], map1.getMaxZoom());
+// var bounds = new L.LatLngBounds(southWest, northEast);
+
+// L.imageOverlay(url, bounds).addTo(map1);
+
+// map1.setMaxBounds(bounds)
+
+var imageUrl = 'https://image.ibb.co/eAuMNk/ward5.png'
+
+L.imageOverlay(imageUrl, new L.LatLngBounds([-0.1127410172131249*scale,-0.053520224662321425*scale], [0.29993293298224444*scale,0.2396765465825439*scale]), { noWrap: true, maxZoom: 10, minZoom: 0}).addTo(map1);
+
+map1.setView([center_w, center_h], 4.5);
+var data, data2;
+ function handleFileSelect(evt) {
+    var file = evt.target.files[0];
+    
+    Papa.parse(file, {
+      header: true,
+      dynamicTyping: true,
+      complete: function(results) {
+        data = results;
+        console.log(data['data'][0][' lat']);
+        // produceHeatmap()
+        uploadSecondFile()
+      }
+    });
+    
+}
+
+function handleFileSelect2(evt) {
+    var file2 = evt.target.files[0];
+
+    Papa.parse(file2, {
+      header: true,
+      dynamicTyping: true,
+      complete: function(results) {
+        data2 = results;
+        // for (var row=0; row<data2['data'].length-1; row++) {
+        //     if (data2['data'][row][' ErrorDistance']!=" Not applicable") 
+        //         console.log(parseInt(data2['data'][row][' ErrorDistance']*100));
+        // }
+        produceHeatmap()
+      }
+    });
+}
+
+function uploadSecondFile() {
+
+    $(document).ready(function(){
+        $("#csv-file2").change(handleFileSelect2);
+  });
+}
+    
+  
+ 
+  $(document).ready(function(){
+    $("#csv-file").change(handleFileSelect);
+  });
+
+function produceHeatmap() {
+    var checkpointArr = new Array(33);
+    var intensity;
+    for (var row=0; row<data['data'].length-1; row++) {
+        if (data2['data'][row][' ErrorDistance']!=" Not applicable") {
+            intensity = parseFloat(data2['data'][row][' ErrorDistance']*10);
+
+            // console.log(isNaN(data2['data'][row][' ErrorDistance']));
+            checkpointArr[row] = new Array(parseFloat(data['data'][row][' lat']), parseFloat(data['data'][row][' lng']), intensity);
+            // console.log(checkpointArr[row]);
+        }
+            
+        else 
+            checkpointArr[row] = new Array(parseFloat(data['data'][row][' lat']), parseFloat(data['data'][row][' lng']), 0)
+        // console.log(data['data'][row][' lat'])
+    }
+    addressPoints = checkpointArr.map(function (p) { return [p[0], p[1], p[2]]; });
+    var heat = L.heatLayer(
+          addressPoints, {radius: 25}).addTo(map1);
+    console.log(checkpointArr)
+}
+
+// checkpointArr[0] = new Array(13.678096798577277, 5.358543576179305, 200);
+// checkpointArr[1] = new Array(12.551145366061217, 8.551572634974809, 400);
+// alert(data);
+// for (var row in data['data']) {
+//     checkpointArr[row] = new Array(data['data'][row]['lat'], data['data'][row]['lng'], 200)
+// }
+// var heat = L.heatLayer([
+//           addressPoints], {radius: 25}).addTo(map1)
+// var addressPoints = [
+// [13.678096798577277, 5.358543576179305, 5710],
+// [13.655999711665197, -0.9280776503073436, 4860]];
+
+// addressPoints = addressPoints.map(function (p) {
+//   var contPoint = map1.layerPointToContainerPoint(L.point(p[0],p[1]));
+//   var latlong = map1.layerPointToLatLng(layerPoint);
+//   return [latlong.lat,latlong.lng,p[2]]; 
+// });
+// var heat = L.heatLayer(addressPoints, {
+//   minOpacity:0.0,
+//   max:1.0,
+//   radius: 10,
+//   gradient:{
+//     0.4: 'blue', 
+//     0.65: 'lime',
+//     1: 'red'
+//   }
+// }).addTo(map1);
+
+// var markerl = L.marker([-0.1127410172131249*scale,-0.053520224662321425*scale]).addTo(map1);
+
+mapo = new OpenLayers.Map('mapo', {
+    restrictedExtent: new OpenLayers.Bounds(0, 0, 691, 541),
+    numZoomLevels: 3,
+    units: 'pixels'
+});
+
+var graphic = new OpenLayers.Layer.Image(
+    'Test',
+    imageUrl,
+    new OpenLayers.Bounds(0, 0, 691, 541),
+    new OpenLayers.Size(250, 195),
+    {isBaseLayer: true}
+);
+
+mapo.addLayers([graphic]);
+mapo.zoomToMaxExtent();
+
+var markerso = new OpenLayers.Layer.Markers("Markers");
+mapo.addLayer(markerso);
+
+var sizeo = new OpenLayers.Size(21,25);
+var offseto = new OpenLayers.Pixel(-(sizeo.w/2), -sizeo.h);
+var icono = new OpenLayers.Icon('http://www.openlayers.org/dev/img/marker.png', sizeo, offseto);
+
+markerso.addMarker(new OpenLayers.Marker(new OpenLayers.LonLat(691/2,541/2),icono));
+
+</script>
+
+</body>
+</html>
