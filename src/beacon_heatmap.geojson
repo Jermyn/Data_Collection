@@ -1,0 +1,2501 @@
+{
+   "type": "FeatureCollection",
+   "features": [
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.03074829931972789,  -0.0071428571428571435 ]
+    },
+    "properties": {
+    "Checkpoint":1,
+    "Device":" b1",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.015782312925170065,  -0.007959183673469388 ]
+    },
+    "properties": {
+    "Checkpoint":2,
+    "Device":" b1",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.005448979591836735,  0.0015170068027210884 ]
+    },
+    "properties": {
+    "Checkpoint":3,
+    "Device":" b1",
+    "Mean Error":" 5.665731809165036",
+    "Variance Error":" 0"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   0.01183673469387755,  0.009183673469387756 ]
+    },
+    "properties": {
+    "Checkpoint":4,
+    "Device":" b1",
+    "Mean Error":" 3.9379768057032103",
+    "Variance Error":" 1.6161662270533632"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   0.00019251700680272108,  0.02585034013605442 ]
+    },
+    "properties": {
+    "Checkpoint":5,
+    "Device":" b1",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.01197278911564626,  0.017210884353741494 ]
+    },
+    "properties": {
+    "Checkpoint":6,
+    "Device":" b1",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.022312925170068026,  0.010816326530612246 ]
+    },
+    "properties": {
+    "Checkpoint":7,
+    "Device":" b1",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.02986394557823129,  0.004469387755102041 ]
+    },
+    "properties": {
+    "Checkpoint":8,
+    "Device":" b1",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.035918367346938776,  0.01476190476190476 ]
+    },
+    "properties": {
+    "Checkpoint":9,
+    "Device":" b1",
+    "Mean Error":" 2.7521193866745826",
+    "Variance Error":" 2.8794758463995627"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.02387755102040816,  0.02217687074829932 ]
+    },
+    "properties": {
+    "Checkpoint":10,
+    "Device":" b1",
+    "Mean Error":" 1.1173250568954132",
+    "Variance Error":" 0"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.011700680272108844,  0.029183673469387755 ]
+    },
+    "properties": {
+    "Checkpoint":11,
+    "Device":" b1",
+    "Mean Error":" 8.088321277890197",
+    "Variance Error":" 0"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.009591836734693876,  0.03653061224489796 ]
+    },
+    "properties": {
+    "Checkpoint":12,
+    "Device":" b1",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.013061224489795917,  0.0473469387755102 ]
+    },
+    "properties": {
+    "Checkpoint":13,
+    "Device":" b1",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.03129251700680272,  0.043401360544217685 ]
+    },
+    "properties": {
+    "Checkpoint":14,
+    "Device":" b1",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.03877551020408163,  0.02707482993197279 ]
+    },
+    "properties": {
+    "Checkpoint":15,
+    "Device":" b1",
+    "Mean Error":" 11.649937760513689",
+    "Variance Error":" 6.018645290463773"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.04380952380952381,  0.02122448979591837 ]
+    },
+    "properties": {
+    "Checkpoint":16,
+    "Device":" b1",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.051972789115646255,  0.010544217687074831 ]
+    },
+    "properties": {
+    "Checkpoint":17,
+    "Device":" b1",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.06217687074829932,  0.028775510204081634 ]
+    },
+    "properties": {
+    "Checkpoint":18,
+    "Device":" b1",
+    "Mean Error":" 15.588946570415324",
+    "Variance Error":" 10.687754590466227"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.05537414965986395,  0.04591836734693878 ]
+    },
+    "properties": {
+    "Checkpoint":19,
+    "Device":" b1",
+    "Mean Error":" 14.90186096468612",
+    "Variance Error":" 9.35284321911436"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.026598639455782315,  0.06278911564625851 ]
+    },
+    "properties": {
+    "Checkpoint":20,
+    "Device":" b1",
+    "Mean Error":" 13.48980976120605",
+    "Variance Error":" 0"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   0.0024421768707482993,  0.08027210884353742 ]
+    },
+    "properties": {
+    "Checkpoint":21,
+    "Device":" b1",
+    "Mean Error":" 7.800936816111787",
+    "Variance Error":" 2.1698181469453717"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   0.017551020408163264,  0.09183673469387756 ]
+    },
+    "properties": {
+    "Checkpoint":22,
+    "Device":" b1",
+    "Mean Error":" 4.553092331994652",
+    "Variance Error":" 0.8694533437963838"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   0.022312925170068026,  0.07619047619047618 ]
+    },
+    "properties": {
+    "Checkpoint":23,
+    "Device":" b1",
+    "Mean Error":" 11.718038405589564",
+    "Variance Error":" 6.086744839374483"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   0.023265306122448978,  0.057619047619047625 ]
+    },
+    "properties": {
+    "Checkpoint":24,
+    "Device":" b1",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   0.033197278911564626,  0.04693877551020408 ]
+    },
+    "properties": {
+    "Checkpoint":25,
+    "Device":" b1",
+    "Mean Error":" 3.6466815300058752",
+    "Variance Error":" 1.9067938785374763"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   0.048435374149659864,  0.057755102040816325 ]
+    },
+    "properties": {
+    "Checkpoint":26,
+    "Device":" b1",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   0.04476190476190476,  0.0707482993197279 ]
+    },
+    "properties": {
+    "Checkpoint":27,
+    "Device":" b1",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   0.03931972789115647,  0.08163265306122448 ]
+    },
+    "properties": {
+    "Checkpoint":28,
+    "Device":" b1",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   0.06687074829931973,  0.0663265306122449 ]
+    },
+    "properties": {
+    "Checkpoint":29,
+    "Device":" b1",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   0.058503401360544216,  0.07959183673469387 ]
+    },
+    "properties": {
+    "Checkpoint":30,
+    "Device":" b1",
+    "Mean Error":" 12.505578520944843",
+    "Variance Error":" 6.874273856109704"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   0.04931972789115646,  0.09387755102040816 ]
+    },
+    "properties": {
+    "Checkpoint":31,
+    "Device":" b1",
+    "Mean Error":" 14.024597012435908",
+    "Variance Error":" 8.39327682329773"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   0.030068027210884352,  0.09931972789115646 ]
+    },
+    "properties": {
+    "Checkpoint":32,
+    "Device":" b1",
+    "Mean Error":" 16.54755650098003",
+    "Variance Error":" 0"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.03074829931972789,  -0.0071428571428571435 ]
+    },
+    "properties": {
+    "Checkpoint":1,
+    "Device":" b2",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.015782312925170065,  -0.007959183673469388 ]
+    },
+    "properties": {
+    "Checkpoint":2,
+    "Device":" b2",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.005448979591836735,  0.0015170068027210884 ]
+    },
+    "properties": {
+    "Checkpoint":3,
+    "Device":" b2",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   0.01183673469387755,  0.009183673469387756 ]
+    },
+    "properties": {
+    "Checkpoint":4,
+    "Device":" b2",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   0.00019251700680272108,  0.02585034013605442 ]
+    },
+    "properties": {
+    "Checkpoint":5,
+    "Device":" b2",
+    "Mean Error":" 2.966105260882476",
+    "Variance Error":" 0"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.01197278911564626,  0.017210884353741494 ]
+    },
+    "properties": {
+    "Checkpoint":6,
+    "Device":" b2",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.022312925170068026,  0.010816326530612246 ]
+    },
+    "properties": {
+    "Checkpoint":7,
+    "Device":" b2",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.02986394557823129,  0.004469387755102041 ]
+    },
+    "properties": {
+    "Checkpoint":8,
+    "Device":" b2",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.035918367346938776,  0.01476190476190476 ]
+    },
+    "properties": {
+    "Checkpoint":9,
+    "Device":" b2",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.02387755102040816,  0.02217687074829932 ]
+    },
+    "properties": {
+    "Checkpoint":10,
+    "Device":" b2",
+    "Mean Error":" 1.8586233618824464",
+    "Variance Error":" 3.284341114840626"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.011700680272108844,  0.029183673469387755 ]
+    },
+    "properties": {
+    "Checkpoint":11,
+    "Device":" b2",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.009591836734693876,  0.03653061224489796 ]
+    },
+    "properties": {
+    "Checkpoint":12,
+    "Device":" b2",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.013061224489795917,  0.0473469387755102 ]
+    },
+    "properties": {
+    "Checkpoint":13,
+    "Device":" b2",
+    "Mean Error":" 6.671454448088263",
+    "Variance Error":" 0"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.03129251700680272,  0.043401360544217685 ]
+    },
+    "properties": {
+    "Checkpoint":14,
+    "Device":" b2",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.03877551020408163,  0.02707482993197279 ]
+    },
+    "properties": {
+    "Checkpoint":15,
+    "Device":" b2",
+    "Mean Error":" 11.666927640712878",
+    "Variance Error":" 6.0356348948737635"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.04380952380952381,  0.02122448979591837 ]
+    },
+    "properties": {
+    "Checkpoint":16,
+    "Device":" b2",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.051972789115646255,  0.010544217687074831 ]
+    },
+    "properties": {
+    "Checkpoint":17,
+    "Device":" b2",
+    "Mean Error":" 14.061060730081783",
+    "Variance Error":" 0"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.06217687074829932,  0.028775510204081634 ]
+    },
+    "properties": {
+    "Checkpoint":18,
+    "Device":" b2",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.05537414965986395,  0.04591836734693878 ]
+    },
+    "properties": {
+    "Checkpoint":19,
+    "Device":" b2",
+    "Mean Error":" 13.591337729489721",
+    "Variance Error":" 7.960021364274534"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.026598639455782315,  0.06278911564625851 ]
+    },
+    "properties": {
+    "Checkpoint":20,
+    "Device":" b2",
+    "Mean Error":" 12.838347488549838",
+    "Variance Error":" 7.2070388630613245"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   0.0024421768707482993,  0.08027210884353742 ]
+    },
+    "properties": {
+    "Checkpoint":21,
+    "Device":" b2",
+    "Mean Error":" 5.597279764042031",
+    "Variance Error":" 0.04840318015035366"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   0.017551020408163264,  0.09183673469387756 ]
+    },
+    "properties": {
+    "Checkpoint":22,
+    "Device":" b2",
+    "Mean Error":" 5.052578583184495",
+    "Variance Error":" 0.5826540477706014"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   0.022312925170068026,  0.07619047619047618 ]
+    },
+    "properties": {
+    "Checkpoint":23,
+    "Device":" b2",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   0.023265306122448978,  0.057619047619047625 ]
+    },
+    "properties": {
+    "Checkpoint":24,
+    "Device":" b2",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   0.033197278911564626,  0.04693877551020408 ]
+    },
+    "properties": {
+    "Checkpoint":25,
+    "Device":" b2",
+    "Mean Error":" 3.32564201659129",
+    "Variance Error":" 2.029840860918575"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   0.048435374149659864,  0.057755102040816325 ]
+    },
+    "properties": {
+    "Checkpoint":26,
+    "Device":" b2",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   0.04476190476190476,  0.0707482993197279 ]
+    },
+    "properties": {
+    "Checkpoint":27,
+    "Device":" b2",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   0.03931972789115647,  0.08163265306122448 ]
+    },
+    "properties": {
+    "Checkpoint":28,
+    "Device":" b2",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   0.06687074829931973,  0.0663265306122449 ]
+    },
+    "properties": {
+    "Checkpoint":29,
+    "Device":" b2",
+    "Mean Error":" 13.594968614905133",
+    "Variance Error":" 0"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   0.058503401360544216,  0.07959183673469387 ]
+    },
+    "properties": {
+    "Checkpoint":30,
+    "Device":" b2",
+    "Mean Error":" 12.64231114945575",
+    "Variance Error":" 7.0110048117095785"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   0.04931972789115646,  0.09387755102040816 ]
+    },
+    "properties": {
+    "Checkpoint":31,
+    "Device":" b2",
+    "Mean Error":" 15.01150484699046",
+    "Variance Error":" 9.380177266212915"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   0.030068027210884352,  0.09931972789115646 ]
+    },
+    "properties": {
+    "Checkpoint":32,
+    "Device":" b2",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.03074829931972789,  -0.0071428571428571435 ]
+    },
+    "properties": {
+    "Checkpoint":1,
+    "Device":" b3",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.015782312925170065,  -0.007959183673469388 ]
+    },
+    "properties": {
+    "Checkpoint":2,
+    "Device":" b3",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.005448979591836735,  0.0015170068027210884 ]
+    },
+    "properties": {
+    "Checkpoint":3,
+    "Device":" b3",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   0.01183673469387755,  0.009183673469387756 ]
+    },
+    "properties": {
+    "Checkpoint":4,
+    "Device":" b3",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   0.00019251700680272108,  0.02585034013605442 ]
+    },
+    "properties": {
+    "Checkpoint":5,
+    "Device":" b3",
+    "Mean Error":" 4.350779602406739",
+    "Variance Error":" 0"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.01197278911564626,  0.017210884353741494 ]
+    },
+    "properties": {
+    "Checkpoint":6,
+    "Device":" b3",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.022312925170068026,  0.010816326530612246 ]
+    },
+    "properties": {
+    "Checkpoint":7,
+    "Device":" b3",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.02986394557823129,  0.004469387755102041 ]
+    },
+    "properties": {
+    "Checkpoint":8,
+    "Device":" b3",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.035918367346938776,  0.01476190476190476 ]
+    },
+    "properties": {
+    "Checkpoint":9,
+    "Device":" b3",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.02387755102040816,  0.02217687074829932 ]
+    },
+    "properties": {
+    "Checkpoint":10,
+    "Device":" b3",
+    "Mean Error":" 2.565789179320239",
+    "Variance Error":" 2.372455677591538"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.011700680272108844,  0.029183673469387755 ]
+    },
+    "properties": {
+    "Checkpoint":11,
+    "Device":" b3",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.009591836734693876,  0.03653061224489796 ]
+    },
+    "properties": {
+    "Checkpoint":12,
+    "Device":" b3",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.013061224489795917,  0.0473469387755102 ]
+    },
+    "properties": {
+    "Checkpoint":13,
+    "Device":" b3",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.03129251700680272,  0.043401360544217685 ]
+    },
+    "properties": {
+    "Checkpoint":14,
+    "Device":" b3",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.03877551020408163,  0.02707482993197279 ]
+    },
+    "properties": {
+    "Checkpoint":15,
+    "Device":" b3",
+    "Mean Error":" 7.092210680776198",
+    "Variance Error":" 0"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.04380952380952381,  0.02122448979591837 ]
+    },
+    "properties": {
+    "Checkpoint":16,
+    "Device":" b3",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.051972789115646255,  0.010544217687074831 ]
+    },
+    "properties": {
+    "Checkpoint":17,
+    "Device":" b3",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.06217687074829932,  0.028775510204081634 ]
+    },
+    "properties": {
+    "Checkpoint":18,
+    "Device":" b3",
+    "Mean Error":" 15.97708917666167",
+    "Variance Error":" 10.345755728785415"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.05537414965986395,  0.04591836734693878 ]
+    },
+    "properties": {
+    "Checkpoint":19,
+    "Device":" b3",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.026598639455782315,  0.06278911564625851 ]
+    },
+    "properties": {
+    "Checkpoint":20,
+    "Device":" b3",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   0.0024421768707482993,  0.08027210884353742 ]
+    },
+    "properties": {
+    "Checkpoint":21,
+    "Device":" b3",
+    "Mean Error":" 6.756508397954872",
+    "Variance Error":" 1.1256419235466506"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   0.017551020408163264,  0.09183673469387756 ]
+    },
+    "properties": {
+    "Checkpoint":22,
+    "Device":" b3",
+    "Mean Error":" 5.306026969777291",
+    "Variance Error":" 1.095676071572237"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   0.022312925170068026,  0.07619047619047618 ]
+    },
+    "properties": {
+    "Checkpoint":23,
+    "Device":" b3",
+    "Mean Error":" 11.884153111898895",
+    "Variance Error":" 0"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   0.023265306122448978,  0.057619047619047625 ]
+    },
+    "properties": {
+    "Checkpoint":24,
+    "Device":" b3",
+    "Mean Error":" 3.5421998091437694",
+    "Variance Error":" 2.08947286114744"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   0.033197278911564626,  0.04693877551020408 ]
+    },
+    "properties": {
+    "Checkpoint":25,
+    "Device":" b3",
+    "Mean Error":" 5.210418228360346",
+    "Variance Error":" 0"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   0.048435374149659864,  0.057755102040816325 ]
+    },
+    "properties": {
+    "Checkpoint":26,
+    "Device":" b3",
+    "Mean Error":" 4.320762382674476",
+    "Variance Error":" 1.3110778939807222"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   0.04476190476190476,  0.0707482993197279 ]
+    },
+    "properties": {
+    "Checkpoint":27,
+    "Device":" b3",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   0.03931972789115647,  0.08163265306122448 ]
+    },
+    "properties": {
+    "Checkpoint":28,
+    "Device":" b3",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   0.06687074829931973,  0.0663265306122449 ]
+    },
+    "properties": {
+    "Checkpoint":29,
+    "Device":" b3",
+    "Mean Error":" 13.209556286341117",
+    "Variance Error":" 7.660705175355167"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   0.058503401360544216,  0.07959183673469387 ]
+    },
+    "properties": {
+    "Checkpoint":30,
+    "Device":" b3",
+    "Mean Error":" 14.015870981723639",
+    "Variance Error":" 0"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   0.04931972789115646,  0.09387755102040816 ]
+    },
+    "properties": {
+    "Checkpoint":31,
+    "Device":" b3",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   0.030068027210884352,  0.09931972789115646 ]
+    },
+    "properties": {
+    "Checkpoint":32,
+    "Device":" b3",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.03074829931972789,  -0.0071428571428571435 ]
+    },
+    "properties": {
+    "Checkpoint":1,
+    "Device":" b4",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.015782312925170065,  -0.007959183673469388 ]
+    },
+    "properties": {
+    "Checkpoint":2,
+    "Device":" b4",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.005448979591836735,  0.0015170068027210884 ]
+    },
+    "properties": {
+    "Checkpoint":3,
+    "Device":" b4",
+    "Mean Error":" 5.597049078513427",
+    "Variance Error":" 0"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   0.01183673469387755,  0.009183673469387756 ]
+    },
+    "properties": {
+    "Checkpoint":4,
+    "Device":" b4",
+    "Mean Error":" 6.176390827074572",
+    "Variance Error":" 0"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   0.00019251700680272108,  0.02585034013605442 ]
+    },
+    "properties": {
+    "Checkpoint":5,
+    "Device":" b4",
+    "Mean Error":" 1.8036835653379553",
+    "Variance Error":" 3.8278609270842674"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.01197278911564626,  0.017210884353741494 ]
+    },
+    "properties": {
+    "Checkpoint":6,
+    "Device":" b4",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.022312925170068026,  0.010816326530612246 ]
+    },
+    "properties": {
+    "Checkpoint":7,
+    "Device":" b4",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.02986394557823129,  0.004469387755102041 ]
+    },
+    "properties": {
+    "Checkpoint":8,
+    "Device":" b4",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.035918367346938776,  0.01476190476190476 ]
+    },
+    "properties": {
+    "Checkpoint":9,
+    "Device":" b4",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.02387755102040816,  0.02217687074829932 ]
+    },
+    "properties": {
+    "Checkpoint":10,
+    "Device":" b4",
+    "Mean Error":" 1.057466555277687",
+    "Variance Error":" 4.5740528055244845"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.011700680272108844,  0.029183673469387755 ]
+    },
+    "properties": {
+    "Checkpoint":11,
+    "Device":" b4",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.009591836734693876,  0.03653061224489796 ]
+    },
+    "properties": {
+    "Checkpoint":12,
+    "Device":" b4",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.013061224489795917,  0.0473469387755102 ]
+    },
+    "properties": {
+    "Checkpoint":13,
+    "Device":" b4",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.03129251700680272,  0.043401360544217685 ]
+    },
+    "properties": {
+    "Checkpoint":14,
+    "Device":" b4",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.03877551020408163,  0.02707482993197279 ]
+    },
+    "properties": {
+    "Checkpoint":15,
+    "Device":" b4",
+    "Mean Error":" 11.264918148472477",
+    "Variance Error":" 6.2011331857619085"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.04380952380952381,  0.02122448979591837 ]
+    },
+    "properties": {
+    "Checkpoint":16,
+    "Device":" b4",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.051972789115646255,  0.010544217687074831 ]
+    },
+    "properties": {
+    "Checkpoint":17,
+    "Device":" b4",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.06217687074829932,  0.028775510204081634 ]
+    },
+    "properties": {
+    "Checkpoint":18,
+    "Device":" b4",
+    "Mean Error":" 15.611711796343274",
+    "Variance Error":" 0"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.05537414965986395,  0.04591836734693878 ]
+    },
+    "properties": {
+    "Checkpoint":19,
+    "Device":" b4",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.026598639455782315,  0.06278911564625851 ]
+    },
+    "properties": {
+    "Checkpoint":20,
+    "Device":" b4",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   0.0024421768707482993,  0.08027210884353742 ]
+    },
+    "properties": {
+    "Checkpoint":21,
+    "Device":" b4",
+    "Mean Error":" 6.015871681945514",
+    "Variance Error":" 0.3860118545176816"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   0.017551020408163264,  0.09183673469387756 ]
+    },
+    "properties": {
+    "Checkpoint":22,
+    "Device":" b4",
+    "Mean Error":" 4.173521732870381",
+    "Variance Error":" 1.4582731252390333"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   0.022312925170068026,  0.07619047619047618 ]
+    },
+    "properties": {
+    "Checkpoint":23,
+    "Device":" b4",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   0.023265306122448978,  0.057619047619047625 ]
+    },
+    "properties": {
+    "Checkpoint":24,
+    "Device":" b4",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   0.033197278911564626,  0.04693877551020408 ]
+    },
+    "properties": {
+    "Checkpoint":25,
+    "Device":" b4",
+    "Mean Error":" 3.1879564824071553",
+    "Variance Error":" 2.4436752757377747"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   0.048435374149659864,  0.057755102040816325 ]
+    },
+    "properties": {
+    "Checkpoint":26,
+    "Device":" b4",
+    "Mean Error":" 4.609194158829482",
+    "Variance Error":" 0"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   0.04476190476190476,  0.0707482993197279 ]
+    },
+    "properties": {
+    "Checkpoint":27,
+    "Device":" b4",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   0.03931972789115647,  0.08163265306122448 ]
+    },
+    "properties": {
+    "Checkpoint":28,
+    "Device":" b4",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   0.06687074829931973,  0.0663265306122449 ]
+    },
+    "properties": {
+    "Checkpoint":29,
+    "Device":" b4",
+    "Mean Error":" 11.863606036692657",
+    "Variance Error":" 6.232310207714136"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   0.058503401360544216,  0.07959183673469387 ]
+    },
+    "properties": {
+    "Checkpoint":30,
+    "Device":" b4",
+    "Mean Error":" 12.949955833246996",
+    "Variance Error":" 7.401137025201994"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   0.04931972789115646,  0.09387755102040816 ]
+    },
+    "properties": {
+    "Checkpoint":31,
+    "Device":" b4",
+    "Mean Error":" 15.952188824676991",
+    "Variance Error":" 0"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   0.030068027210884352,  0.09931972789115646 ]
+    },
+    "properties": {
+    "Checkpoint":32,
+    "Device":" b4",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.03074829931972789,  -0.0071428571428571435 ]
+    },
+    "properties": {
+    "Checkpoint":1,
+    "Device":" b5",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.015782312925170065,  -0.007959183673469388 ]
+    },
+    "properties": {
+    "Checkpoint":2,
+    "Device":" b5",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.005448979591836735,  0.0015170068027210884 ]
+    },
+    "properties": {
+    "Checkpoint":3,
+    "Device":" b5",
+    "Mean Error":" 5.386535282951774",
+    "Variance Error":" 0"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   0.01183673469387755,  0.009183673469387756 ]
+    },
+    "properties": {
+    "Checkpoint":4,
+    "Device":" b5",
+    "Mean Error":" 6.984185938148628",
+    "Variance Error":" 1.7282519064687705"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   0.00019251700680272108,  0.02585034013605442 ]
+    },
+    "properties": {
+    "Checkpoint":5,
+    "Device":" b5",
+    "Mean Error":" 4.475746399717515",
+    "Variance Error":" 0"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.01197278911564626,  0.017210884353741494 ]
+    },
+    "properties": {
+    "Checkpoint":6,
+    "Device":" b5",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.022312925170068026,  0.010816326530612246 ]
+    },
+    "properties": {
+    "Checkpoint":7,
+    "Device":" b5",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.02986394557823129,  0.004469387755102041 ]
+    },
+    "properties": {
+    "Checkpoint":8,
+    "Device":" b5",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.035918367346938776,  0.01476190476190476 ]
+    },
+    "properties": {
+    "Checkpoint":9,
+    "Device":" b5",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.02387755102040816,  0.02217687074829932 ]
+    },
+    "properties": {
+    "Checkpoint":10,
+    "Device":" b5",
+    "Mean Error":" 1.9693454741602816",
+    "Variance Error":" 3.3677943572486897"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.011700680272108844,  0.029183673469387755 ]
+    },
+    "properties": {
+    "Checkpoint":11,
+    "Device":" b5",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.009591836734693876,  0.03653061224489796 ]
+    },
+    "properties": {
+    "Checkpoint":12,
+    "Device":" b5",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.013061224489795917,  0.0473469387755102 ]
+    },
+    "properties": {
+    "Checkpoint":13,
+    "Device":" b5",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.03129251700680272,  0.043401360544217685 ]
+    },
+    "properties": {
+    "Checkpoint":14,
+    "Device":" b5",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.03877551020408163,  0.02707482993197279 ]
+    },
+    "properties": {
+    "Checkpoint":15,
+    "Device":" b5",
+    "Mean Error":" 8.649709286772794",
+    "Variance Error":" 3.102212141530286"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.04380952380952381,  0.02122448979591837 ]
+    },
+    "properties": {
+    "Checkpoint":16,
+    "Device":" b5",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.051972789115646255,  0.010544217687074831 ]
+    },
+    "properties": {
+    "Checkpoint":17,
+    "Device":" b5",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.06217687074829932,  0.028775510204081634 ]
+    },
+    "properties": {
+    "Checkpoint":18,
+    "Device":" b5",
+    "Mean Error":" 17.035172063220397",
+    "Variance Error":" 11.403833327083841"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.05537414965986395,  0.04591836734693878 ]
+    },
+    "properties": {
+    "Checkpoint":19,
+    "Device":" b5",
+    "Mean Error":" 13.789635523753203",
+    "Variance Error":" 8.240719585966243"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.026598639455782315,  0.06278911564625851 ]
+    },
+    "properties": {
+    "Checkpoint":20,
+    "Device":" b5",
+    "Mean Error":" 7.914679414641161",
+    "Variance Error":" 0"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   0.0024421768707482993,  0.08027210884353742 ]
+    },
+    "properties": {
+    "Checkpoint":21,
+    "Device":" b5",
+    "Mean Error":" 4.841166353282071",
+    "Variance Error":" 0.9454926204752505"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   0.017551020408163264,  0.09183673469387756 ]
+    },
+    "properties": {
+    "Checkpoint":22,
+    "Device":" b5",
+    "Mean Error":" 6.585649413787048",
+    "Variance Error":" 1.0426654498552335"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   0.022312925170068026,  0.07619047619047618 ]
+    },
+    "properties": {
+    "Checkpoint":23,
+    "Device":" b5",
+    "Mean Error":" 11.692134875811659",
+    "Variance Error":" 0"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   0.023265306122448978,  0.057619047619047625 ]
+    },
+    "properties": {
+    "Checkpoint":24,
+    "Device":" b5",
+    "Mean Error":" 3.644521476348929",
+    "Variance Error":" 1.7194522971117518"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   0.033197278911564626,  0.04693877551020408 ]
+    },
+    "properties": {
+    "Checkpoint":25,
+    "Device":" b5",
+    "Mean Error":" 4.5573967084501295",
+    "Variance Error":" 0.7892017586072766"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   0.048435374149659864,  0.057755102040816325 ]
+    },
+    "properties": {
+    "Checkpoint":26,
+    "Device":" b5",
+    "Mean Error":" 2.1607845502702343",
+    "Variance Error":" 0"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   0.04476190476190476,  0.0707482993197279 ]
+    },
+    "properties": {
+    "Checkpoint":27,
+    "Device":" b5",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   0.03931972789115647,  0.08163265306122448 ]
+    },
+    "properties": {
+    "Checkpoint":28,
+    "Device":" b5",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   0.06687074829931973,  0.0663265306122449 ]
+    },
+    "properties": {
+    "Checkpoint":29,
+    "Device":" b5",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   0.058503401360544216,  0.07959183673469387 ]
+    },
+    "properties": {
+    "Checkpoint":30,
+    "Device":" b5",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   0.04931972789115646,  0.09387755102040816 ]
+    },
+    "properties": {
+    "Checkpoint":31,
+    "Device":" b5",
+    "Mean Error":" 13.614819415813463",
+    "Variance Error":" 7.983502832712592"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   0.030068027210884352,  0.09931972789115646 ]
+    },
+    "properties": {
+    "Checkpoint":32,
+    "Device":" b5",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.03074829931972789,  -0.0071428571428571435 ]
+    },
+    "properties": {
+    "Checkpoint":1,
+    "Device":" b6",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.015782312925170065,  -0.007959183673469388 ]
+    },
+    "properties": {
+    "Checkpoint":2,
+    "Device":" b6",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.005448979591836735,  0.0015170068027210884 ]
+    },
+    "properties": {
+    "Checkpoint":3,
+    "Device":" b6",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   0.01183673469387755,  0.009183673469387756 ]
+    },
+    "properties": {
+    "Checkpoint":4,
+    "Device":" b6",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   0.00019251700680272108,  0.02585034013605442 ]
+    },
+    "properties": {
+    "Checkpoint":5,
+    "Device":" b6",
+    "Mean Error":" 3.5611818878813537",
+    "Variance Error":" 2.070493369835712"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.01197278911564626,  0.017210884353741494 ]
+    },
+    "properties": {
+    "Checkpoint":6,
+    "Device":" b6",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.022312925170068026,  0.010816326530612246 ]
+    },
+    "properties": {
+    "Checkpoint":7,
+    "Device":" b6",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.02986394557823129,  0.004469387755102041 ]
+    },
+    "properties": {
+    "Checkpoint":8,
+    "Device":" b6",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.035918367346938776,  0.01476190476190476 ]
+    },
+    "properties": {
+    "Checkpoint":9,
+    "Device":" b6",
+    "Mean Error":" 1.4485758638623132",
+    "Variance Error":" 0"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.02387755102040816,  0.02217687074829932 ]
+    },
+    "properties": {
+    "Checkpoint":10,
+    "Device":" b6",
+    "Mean Error":" 1.993322742808896",
+    "Variance Error":" 3.6382297792542726"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.011700680272108844,  0.029183673469387755 ]
+    },
+    "properties": {
+    "Checkpoint":11,
+    "Device":" b6",
+    "Mean Error":" 9.847982481014082",
+    "Variance Error":" 0"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.009591836734693876,  0.03653061224489796 ]
+    },
+    "properties": {
+    "Checkpoint":12,
+    "Device":" b6",
+    "Mean Error":" 3.569773791100731",
+    "Variance Error":" 1.9835580339980907"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.013061224489795917,  0.0473469387755102 ]
+    },
+    "properties": {
+    "Checkpoint":13,
+    "Device":" b6",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.03129251700680272,  0.043401360544217685 ]
+    },
+    "properties": {
+    "Checkpoint":14,
+    "Device":" b6",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.03877551020408163,  0.02707482993197279 ]
+    },
+    "properties": {
+    "Checkpoint":15,
+    "Device":" b6",
+    "Mean Error":" 7.196147798265088",
+    "Variance Error":" 0"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.04380952380952381,  0.02122448979591837 ]
+    },
+    "properties": {
+    "Checkpoint":16,
+    "Device":" b6",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.051972789115646255,  0.010544217687074831 ]
+    },
+    "properties": {
+    "Checkpoint":17,
+    "Device":" b6",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.06217687074829932,  0.028775510204081634 ]
+    },
+    "properties": {
+    "Checkpoint":18,
+    "Device":" b6",
+    "Mean Error":" 15.018920524327322",
+    "Variance Error":" 9.469893454542342"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.05537414965986395,  0.04591836734693878 ]
+    },
+    "properties": {
+    "Checkpoint":19,
+    "Device":" b6",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   -0.026598639455782315,  0.06278911564625851 ]
+    },
+    "properties": {
+    "Checkpoint":20,
+    "Device":" b6",
+    "Mean Error":" 10.525067333243454",
+    "Variance Error":" 5.464981317839189"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   0.0024421768707482993,  0.08027210884353742 ]
+    },
+    "properties": {
+    "Checkpoint":21,
+    "Device":" b6",
+    "Mean Error":" 5.1292184831431005",
+    "Variance Error":" 1.0163565395995753"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   0.017551020408163264,  0.09183673469387756 ]
+    },
+    "properties": {
+    "Checkpoint":22,
+    "Device":" b6",
+    "Mean Error":" 4.922746349257123",
+    "Variance Error":" 0.7094757093506002"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   0.022312925170068026,  0.07619047619047618 ]
+    },
+    "properties": {
+    "Checkpoint":23,
+    "Device":" b6",
+    "Mean Error":" 8.735916105606117",
+    "Variance Error":" 3.104715593084424"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   0.023265306122448978,  0.057619047619047625 ]
+    },
+    "properties": {
+    "Checkpoint":24,
+    "Device":" b6",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   0.033197278911564626,  0.04693877551020408 ]
+    },
+    "properties": {
+    "Checkpoint":25,
+    "Device":" b6",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   0.048435374149659864,  0.057755102040816325 ]
+    },
+    "properties": {
+    "Checkpoint":26,
+    "Device":" b6",
+    "Mean Error":" 3.5755194242246247",
+    "Variance Error":" 1.9778227421324124"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   0.04476190476190476,  0.0707482993197279 ]
+    },
+    "properties": {
+    "Checkpoint":27,
+    "Device":" b6",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   0.03931972789115647,  0.08163265306122448 ]
+    },
+    "properties": {
+    "Checkpoint":28,
+    "Device":" b6",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   0.06687074829931973,  0.0663265306122449 ]
+    },
+    "properties": {
+    "Checkpoint":29,
+    "Device":" b6",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   0.058503401360544216,  0.07959183673469387 ]
+    },
+    "properties": {
+    "Checkpoint":30,
+    "Device":" b6",
+    "Mean Error":" 13.505609502243866",
+    "Variance Error":" 7.956724124843588"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   0.04931972789115646,  0.09387755102040816 ]
+    },
+    "properties": {
+    "Checkpoint":31,
+    "Device":" b6",
+    "Mean Error":" 15.293451302800136",
+    "Variance Error":" 9.662121887641284"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [   0.030068027210884352,  0.09931972789115646 ]
+    },
+    "properties": {
+    "Checkpoint":32,
+    "Device":" b6",
+    "Mean Error":" No Mean",
+    "Variance Error":" No Variance"
+    }
+  }
+]
+}
