@@ -4,7 +4,7 @@ import requests
 import json
 from bokeh.plotting import figure, show, output_file
 from storePOI import office_POI, ward5_POI, actlab_POI
-from storeScale import getScale
+from storeScale import getScale, getCoordinates, getImage
 import csv, operator
 from datetime import datetime
 from bokeh.io import curdoc
@@ -32,6 +32,7 @@ circle_y = []
 circle2_x = []
 robot_time = []
 circle2_y = []
+robot_list = []
 coord_total_list = []
 path_list = []
 sortedlist = []
@@ -100,26 +101,36 @@ def midpoint(x1, x2, y1, y2, divisor):
 
 def actlab_Path():
 	global path_list, history_list, xlist, ylist, sortedlist, mid_y, mid_x
-	center = ward5_POI()
+	# center = ward5_POI()
 	# print (center)
-	map_scale = getScale("ward5678")
+	map_scale = getScale("MD6")
 	# print (map_scale)
-	reader = csv.reader(open("robot_path_experiment2.csv"), delimiter=",")
-	beacon_reader = csv.reader(open("beacon_path_experiment2.csv"), delimiter=",")
-	next(reader)
-	next(beacon_reader)
-	sortedlist = sorted(beacon_reader, key=operator.itemgetter(0, 5), reverse=False)
-	history_list = sorted(reader, key=operator.itemgetter(0), reverse=False)
+	reader = csv.reader(open("robot_path_experiment4.csv"), delimiter=",")
+	beacon_reader = csv.reader(open("beacon_path_experiment4.csv"), delimiter=",")
+	# next(reader)
+	# next(beacon_reader)
+	sortedlist = sorted(beacon_reader, key=operator.itemgetter(0), reverse=False)
+	robot_list = sorted(reader, key=operator.itemgetter(0), reverse=False)
+	initial_date = "2017-07-28 12:55:32"
+	final_date = "2017-07-28 13:17:42"
+	initial_date = datetime.strptime(initial_date, "%Y-%m-%d %H:%M:%S")
+	final_date = datetime.strptime(final_date, "%Y-%m-%d %H:%M:%S")
 	for i in range(0, len(sortedlist)):
-		if sortedlist[i][3]==" ward5678":
-			sortedlist[i][1] = float(sortedlist[i][1])*float(map_scale)
-			sortedlist[i][2] = float(sortedlist[i][2])*float(map_scale)
+		# if sortedlist[i][3]==" ward5678":
+		sortedlist[i][2] = float(sortedlist[i][2])
+		sortedlist[i][3] = float(sortedlist[i][3])
+		sortedlist[i][1] = datetime.fromtimestamp((int(sortedlist[i][1])/1000)).strftime("%Y-%m-%d %H:%M:%S")
+		if (sortedlist[i][1] >= str(initial_date)) and (sortedlist[i][1] <= str(final_date)):
 			path_list.append(sortedlist[i])
 			# predicted_time.append(sortedlist[i][5])
-	path_list = sorted(path_list, key=operator.itemgetter(0, 5), reverse=False)
-	# print (path_list)
-	for j in range(0, len(history_list)):
-		history_list[j][0] = datetime.fromtimestamp(int(history_list[j][0])).strftime("%Y-%m-%d %H:%M:%S")
+	path_list = sorted(path_list, key=operator.itemgetter(0, 1), reverse=False)
+	# for convertTime in range(0, len(path_list)):
+	# 	path_list[convertTime][1] = datetime.fromtimestamp((int(path_list[convertTime][1])/1000)).strftime("%Y-%m-%d %H:%M:%S")
+		# print (path_list[convertTime][1]<path_list[convertTime+1][1])
+	for j in range(0, len(robot_list)):
+		robot_list[j][0] = datetime.fromtimestamp(int(robot_list[j][0])).strftime("%Y-%m-%d %H:%M:%S")
+		if (robot_list[j][0] >= str(initial_date)) and (robot_list[j][0] <= str(final_date)):
+			history_list.append(robot_list[j])
 		# history_file.write(str(history_list[j]) + "\n")
 		# history_list[j][1] = (float(history_list[j][1]) / float(map_scale))
 		# history_list[j][2] = (float(history_list[j][2]) / float(map_scale))
@@ -128,9 +139,10 @@ def actlab_Path():
 		# path_list[s][2] = float(path_list[s][2]) / float(map_scale)
 	# print (sortedlist)
 	# print (history_list)
-	for k in range(0, len(history_list)):
-		xlist.append("{0:.3f}".format(float(history_list[k][1])))
-		ylist.append("{0:.3f}".format(float(history_list[k][2])))
+	# print (len(history_list))
+	for k in range(0, len(history_list)):	
+		xlist.append("{0:.3f}".format((float(history_list[k][1]))/float(map_scale)))
+		ylist.append("{0:.3f}".format((float(history_list[k][2]))/float(map_scale)))
 		# if k!=len(history_list)-1:
 		# 	x1 = float(history_list[k][1])
 		# 	y1 = float(history_list[k][2])
@@ -180,39 +192,21 @@ def actlab_Path():
 	x1 = ColumnDataSource(data=dict(x1=circle_x, y1=circle_y))
 	y1 = ColumnDataSource(data=dict(x1=circle2_x, y1=circle2_y))
 	line1 = ColumnDataSource(data=dict(x1=path_x, y1=path_y))
-# 	print (path_list)
-	query_ward5 = 'query{map (id:"ward5678") {image}}'
-	query_coordinates = 'query{map (id:"ward5678") {coordinates}}'
-	r = requests.get("http://137.132.165.139/graphql", {"query":query_ward5})
-	s = requests.get("http://137.132.165.139/graphql", {"query":query_coordinates})
-	coor = s.text
-	cod = json.loads(coor)
-	image = r.text
-	img = json.loads(image)
-	imgdata = base64.b64decode(img['data']['map']['image'])
-	filename = 'ward5.png'
-	with open(filename, 'wb') as f:
-		f.write(imgdata)
-	for i in range(0, len(cod['data']['map']['coordinates'])):
-		temp = cod['data']['map']['coordinates'].split("],")
-	for i in range(0, len(temp)):
-		temp[i] = temp[i].split(",")
-		for j in range(0, 2):
-			while "[" in temp[i][j]:
-				temp[i][j] = temp[i][j].strip("[")
-			while "]" in temp[i][j]:
-				temp[i][j] = temp[i][j].strip("]")	
-		temp[i][0] = float(temp[i][0])*float(map_scale)
-		temp[i][1] = float(temp[i][1])*float(map_scale)
-		coord_lng_list.append(temp[i][0])
-		coord_lat_list.append(temp[i][1])
-		coord_total_list = coord_lng_list + coord_lat_list	
+	map_coordinates = getCoordinates("MD6")
+	for i in range(0, len(map_coordinates)):
+		coord_lng_list.append(map_coordinates[i][0])
+		coord_lat_list.append(map_coordinates[i][1])
+	coord_total_list = coord_lng_list + coord_lat_list	
 	min_pt, max_pt = findMinimum_Maximum(coord_total_list)
 	min_x, max_x = findMinimum_Maximum(coord_lng_list)
 	min_y, max_y = findMinimum_Maximum(coord_lat_list)
+	# print (min_y)
+	# print (max_y)
 	return min_pt, max_pt, min_x, max_x, min_y, max_y, x1, y1, line1, rtime_now, ctime_now, startTime, duration, predictedStart, predict_duration
  
 min_pt, max_pt, min_x, max_x, min_y, max_y, x1, y1, line1, rtime_now, ctime_now, startTime, duration, predictedStart, predict_duration = actlab_Path()	
+# print (xlist)
+# print (ylist)
 labelValue=" "
 select1 = Select(title="DeviceID:", value=devList[0], options=devList, width=120)
 timestamp_robot = TextInput(value=labelValue, title="Robot Timestamp:", width = 100)
@@ -223,7 +217,8 @@ average_checkbox = CheckboxGroup(
         labels=["Average"], active=[0, 1])
 # output_file('Actlab.html')
 p = figure(x_range=(min_pt, max_pt), y_range=(min_pt, max_pt))
-p.image_url(url=['https://image.ibb.co/eAuMNk/ward5.png'], x=min_x, y=min_y, w=(max_x - min_x), h=(max_y - min_y), anchor="bottom_left")
+image_link = getImage("MD6")
+p.image_url(url=[image_link], x=min_x, y=min_y, w=(max_x - min_x), h=(max_y - min_y), anchor="bottom_left")
 p.line(xlist, ylist, line_width=3, color="navy")
 
 date = time.strptime(str(startTime), "%Y-%m-%d %H:%M:%S")
@@ -298,7 +293,7 @@ def update():
 	for q in range(0, len(path_list)):
 		if c==path_list[q][0]:
 			temp_x.append("{0:.3f}".format(float(path_list[q][2])))
-			temp_y.append("{0:.3f}".format(float(path_list[q][1])))
+			temp_y.append("{0:.3f}".format(float(path_list[q][3])))
 	for s in range(0, len(temp_x)):		
 		diff = len(temp_x) - counter
 		if diff > 5:
@@ -379,8 +374,8 @@ def update():
 		rz = dateutil.relativedelta.relativedelta (datetime.now(), ctime_now)
 		pre_current_dur = rz.seconds
 		for j in range(0, len(sortedlist)):
-			if (sortedlist[j][3]==" ward5678") and (sortedlist[j][0]==c):
-				predicted_time.append(sortedlist[j][5])
+			if (sortedlist[j][0]==c):
+				predicted_time.append(sortedlist[j][1])
 		if count==0:
 			predictedStart = dateutil.parser.parse(predicted_time[0])
 			predictedNext = dateutil.parser.parse(predicted_time[1])
@@ -483,7 +478,7 @@ derer = p.select(dict(name="predicted_line"))
 ds = renderer[0].data_source
 dz = enderer[0].data_source
 da = derer[0].data_source
-p.axis.visible = False
+# p.axis.visible = False
 p.xgrid.grid_line_color = None
 p.xgrid.grid_line_color = None
 # print (dz.data)
