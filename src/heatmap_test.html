@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title></title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    
+    <script src="http://openlayers.org/api/OpenLayers.js"></script>
+    <link href="mapview.css" rel="stylesheet">
+    <link href='http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.css' rel='stylesheet' />
+    <script src='http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.js'></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.39.1/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v0.39.1/mapbox-gl.css' rel='stylesheet' />
+   <!--  <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css"> -->
+</head>
+<body>
+<!-- <div id="map1"></div> -->
+<table>
+<tr>
+<td><h3 class="tagline">Mean Error for Beacons<br> b6 @MD6</h3>
+<div id="map1" style="height: 600px;  width: 1220px; border: 1px solid red;"></div></td>
+<!--  <td><h3 class="tagline">Mean Error for Beacons<br> b2 @MD6</h3>
+<div id="map2" style="height: 600px;  width: 620px; border: 1px solid red;"></div></td>-->
+</tr>
+<!-- <tr>
+<td><h3 class="tagline">Mean Error for Beacons<br> b3 @MD6</h3>
+<div id="map3" style="height: 600px;  width: 620px; border: 1px solid red;"></div></td>
+<td><h3 class="tagline">Mean Error for Beacons<br> b4 @MD6</h3>
+<div id="map4" style="height: 600px;  width: 620px; border: 1px solid red;"></div></td>
+</tr>
+<tr>
+<td><h3 class="tagline">Mean Error for Beacons<br> b5 @MD6</h3>
+<div id="map5" style="height: 600px;  width: 620px; border: 1px solid red;"></div></td>
+<td><h3 class="tagline">Mean Error for Beacons<br> b6 @MD6</h3>
+<div id="map6" style="height: 600px;  width: 620px; border: 1px solid red;"></div></td>
+</tr> -->
+</table>
+</div>
+<div>
+    <input class="get-markers" type="button" value="Get all the Markers" />
+</div>
+<script src="https://raw.githubusercontent.com/mholt/PapaParse/master/papaparse.min.js"></script>
+<input type="file" id="csv-file" name="files"/>
+<!-- <input type="file" id="csv-file2" name="files"/>
+<input type="file" id="csv-file3" name="filess"/> -->
+<script src='/Users/jermz/Desktop/eclipse-workspace/Leaflet.heat-gh-pages/dist/leaflet-heat.js'></script>
+<script src="http://leaflet.github.io/Leaflet.markercluster/example/realworld.10000.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+  <script src="https://d3js.org/d3-collection.v1.min.js"></script>
+<script src="https://d3js.org/d3-dispatch.v1.min.js"></script>
+<script src="https://d3js.org/d3-dsv.v1.min.js"></script>
+<script src="https://d3js.org/d3-request.v1.min.js"></script>
+<script src="http://leaflet.github.io/Leaflet.label/leaflet.label.js"></script>
+<link rel="stylesheet" href="http://leaflet.github.io/Leaflet.label/leaflet.label.css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/mootools/1.2.4/mootools-yui-compressed.js"></script>
+<!-- <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css">
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="http://watson.lennardvoogdt.nl/Leaflet.awesome-markers/dist/leaflet.awesome-markers.css">
+<link rel="stylesheet" href="/Users/jermz/Desktop/eclipse-workspace/Data_Collection/src/node_modules/drmonty-leaflet-awesome-markers/js/leaflet.awesome-markers.js"> -->
+<!-- <div id="mapo" style="height: 250px; width:250px; border: 1px solid red;"></div> -->
+<!-- <button id="done">Done moving current marker</button> -->
+<script>
+// localStorage.clear();
+scale = 147;
+
+
+var map1 = L.map('map1', {
+    crs: L.CRS.Simple,
+    attributionControl: false,
+    // maxBounds: new L.LatLngBounds([-0.1127410172131249*scale,-0.053520224662321425*scale], [0.29993293298224444*scale,0.2396765465825439*scale])
+    maxBounds: new L.LatLngBounds([-0.08445722940064115, -0.0947570803184874], [0.15724162077680148, 0.16891479468421267])
+});
+// var map2 = L.map('map2', {
+//     crs: L.CRS.Simple,
+//     attributionControl: false,
+//     // maxBounds: new L.LatLngBounds([-0.1127410172131249*scale,-0.053520224662321425*scale], [0.29993293298224444*scale,0.2396765465825439*scale])
+//     maxBounds: new L.LatLngBounds([-0.0947570803184874, -0.08445722940064115], [0.16891479468421267, 0.15724162077680148])
+// });
+// var map3 = L.map('map3', {
+//     crs: L.CRS.Simple,
+//     attributionControl: false,
+//     // maxBounds: new L.LatLngBounds([-0.1127410172131249*scale,-0.053520224662321425*scale], [0.29993293298224444*scale,0.2396765465825439*scale])
+//     maxBounds: new L.LatLngBounds([-0.0947570803184874, -0.08445722940064115], [0.16891479468421267, 0.15724162077680148])
+// });
+// var map4 = L.map('map4', {
+//     crs: L.CRS.Simple,
+//     attributionControl: false,
+//     // maxBounds: new L.LatLngBounds([-0.1127410172131249*scale,-0.053520224662321425*scale], [0.29993293298224444*scale,0.2396765465825439*scale])
+//     maxBounds: new L.LatLngBounds([-0.0947570803184874, -0.08445722940064115], [0.16891479468421267, 0.15724162077680148])
+// });
+// var map5 = L.map('map5', {
+//     crs: L.CRS.Simple,
+//     attributionControl: false,
+//     // maxBounds: new L.LatLngBounds([-0.1127410172131249*scale,-0.053520224662321425*scale], [0.29993293298224444*scale,0.2396765465825439*scale])
+//     maxBounds: new L.LatLngBounds([-0.0947570803184874, -0.08445722940064115], [0.16891479468421267, 0.15724162077680148])
+// });
+// var map6 = L.map('map6', {
+//     crs: L.CRS.Simple,
+//     attributionControl: false,
+//     // maxBounds: new L.LatLngBounds([-0.1127410172131249*scale,-0.053520224662321425*scale], [0.29993293298224444*scale,0.2396765465825439*scale])
+//     maxBounds: new L.LatLngBounds([-0.0947570803184874, -0.08445722940064115], [0.16891479468421267, 0.15724162077680148])
+// });
+
+
+var anchorIcon = L.icon({
+        iconUrl: 'http://www.myiconfinder.com/uploads/iconsets/256-256-6096188ce806c80cf30dca727fe7c237.png',
+        iconSize: [30, 30], // size of the icon
+        iconAnchor: [0, 0]
+        });
+L.marker([0.0015196670060504402,0.014031394088931393], {
+    icon: anchorIcon
+    })
+.addTo(map1);
+
+L.marker([0.056622960046681214, -0.022017495301099643], {
+    icon: anchorIcon
+    })
+.addTo(map1);
+
+L.marker([0.04065845780182542,-0.048968331484701366], {
+    icon: anchorIcon
+}).addTo(map1);
+L.marker([-0.014959824965174562,-0.010859505589081664], {
+    icon: anchorIcon
+}).addTo(map1);
+L.marker([-0.005861771549518835,-0.04931165450807384], {
+    icon: anchorIcon
+}).addTo(map1);
+
+L.marker([0.04336927814892988,-0.07112991420680714], {
+    icon: anchorIcon
+}).addTo(map1);
+L.marker([0.050319891605241196,-0.0395996601149875], {
+    icon: anchorIcon
+}).addTo(map1);
+L.marker([0.07958726879385836,0.007584241452605056], {
+    icon: anchorIcon
+}).addTo(map1);
+
+L.marker([0.06609893394802668,0.013406712768272655], {
+    icon: anchorIcon
+}).addTo(map1);
+L.marker([0.04425934246584973,0.027251302851198034], {
+    icon: anchorIcon
+}).addTo(map1);
+L.marker([0.07216923205220382,0.07301060386890867], {
+    icon: anchorIcon
+}).addTo(map1);
+L.marker([0.09768022207659044,0.0556329955646504], {
+    icon: anchorIcon
+}).addTo(map1);
+L.marker([0.10396475518004422,0.0430902264968438], {
+    icon: anchorIcon
+}).addTo(map1);
+
+
+// // map2
+// L.marker([0.0015196670060504402,0.014031394088931393], {
+//     icon: anchorIcon
+//     })
+// .addTo(map2);
+
+// L.marker([0.056622960046681214, -0.022017495301099643], {
+//     icon: anchorIcon
+//     })
+// .addTo(map2);
+
+// L.marker([0.04065845780182542,-0.048968331484701366], {
+//     icon: anchorIcon
+// }).addTo(map2);
+// L.marker([-0.014959824965174562,-0.010859505589081664], {
+//     icon: anchorIcon
+// }).addTo(map2);
+// L.marker([-0.005861771549518835,-0.04931165450807384], {
+//     icon: anchorIcon
+// }).addTo(map2);
+
+// L.marker([0.04336927814892988,-0.07112991420680714], {
+//     icon: anchorIcon
+// }).addTo(map2);
+// L.marker([0.050319891605241196,-0.0395996601149875], {
+//     icon: anchorIcon
+// }).addTo(map2);
+// L.marker([0.07958726879385836,0.007584241452605056], {
+//     icon: anchorIcon
+// }).addTo(map2);
+
+// L.marker([0.06609893394802668,0.013406712768272655], {
+//     icon: anchorIcon
+// }).addTo(map2);
+// L.marker([0.04425934246584973,0.027251302851198034], {
+//     icon: anchorIcon
+// }).addTo(map2);
+// L.marker([0.07216923205220382,0.07301060386890867], {
+//     icon: anchorIcon
+// }).addTo(map2);
+// L.marker([0.09768022207659044,0.0556329955646504], {
+//     icon: anchorIcon
+// }).addTo(map2);
+// L.marker([0.10396475518004422,0.0430902264968438], {
+//     icon: anchorIcon
+// }).addTo(map2);
+
+// //map3
+// L.marker([0.0015196670060504402,0.014031394088931393], {
+//     icon: anchorIcon
+//     })
+// .addTo(map3);
+
+// L.marker([0.056622960046681214, -0.022017495301099643], {
+//     icon: anchorIcon
+//     })
+// .addTo(map3);
+
+// L.marker([0.04065845780182542,-0.048968331484701366], {
+//     icon: anchorIcon
+// }).addTo(map3);
+// L.marker([-0.014959824965174562,-0.010859505589081664], {
+//     icon: anchorIcon
+// }).addTo(map3);
+// L.marker([-0.005861771549518835,-0.04931165450807384], {
+//     icon: anchorIcon
+// }).addTo(map3);
+
+// L.marker([0.04336927814892988,-0.07112991420680714], {
+//     icon: anchorIcon
+// }).addTo(map3);
+// L.marker([0.050319891605241196,-0.0395996601149875], {
+//     icon: anchorIcon
+// }).addTo(map3);
+// L.marker([0.07958726879385836,0.007584241452605056], {
+//     icon: anchorIcon
+// }).addTo(map3);
+
+// L.marker([0.06609893394802668,0.013406712768272655], {
+//     icon: anchorIcon
+// }).addTo(map3);
+// L.marker([0.04425934246584973,0.027251302851198034], {
+//     icon: anchorIcon
+// }).addTo(map3);
+// L.marker([0.07216923205220382,0.07301060386890867], {
+//     icon: anchorIcon
+// }).addTo(map3);
+// L.marker([0.09768022207659044,0.0556329955646504], {
+//     icon: anchorIcon
+// }).addTo(map3);
+// L.marker([0.10396475518004422,0.0430902264968438], {
+//     icon: anchorIcon
+// }).addTo(map3);
+
+// //map4
+// L.marker([0.0015196670060504402,0.014031394088931393], {
+//     icon: anchorIcon
+//     })
+// .addTo(map4);
+
+// L.marker([0.056622960046681214, -0.022017495301099643], {
+//     icon: anchorIcon
+//     })
+// .addTo(map4);
+
+// L.marker([0.04065845780182542,-0.048968331484701366], {
+//     icon: anchorIcon
+// }).addTo(map4);
+// L.marker([-0.014959824965174562,-0.010859505589081664], {
+//     icon: anchorIcon
+// }).addTo(map4);
+// L.marker([-0.005861771549518835,-0.04931165450807384], {
+//     icon: anchorIcon
+// }).addTo(map4);
+
+// L.marker([0.04336927814892988,-0.07112991420680714], {
+//     icon: anchorIcon
+// }).addTo(map4);
+// L.marker([0.050319891605241196,-0.0395996601149875], {
+//     icon: anchorIcon
+// }).addTo(map4);
+// L.marker([0.07958726879385836,0.007584241452605056], {
+//     icon: anchorIcon
+// }).addTo(map4);
+
+// L.marker([0.06609893394802668,0.013406712768272655], {
+//     icon: anchorIcon
+// }).addTo(map4);
+// L.marker([0.04425934246584973,0.027251302851198034], {
+//     icon: anchorIcon
+// }).addTo(map4);
+// L.marker([0.07216923205220382,0.07301060386890867], {
+//     icon: anchorIcon
+// }).addTo(map4);
+// L.marker([0.09768022207659044,0.0556329955646504], {
+//     icon: anchorIcon
+// }).addTo(map4);
+// L.marker([0.10396475518004422,0.0430902264968438], {
+//     icon: anchorIcon
+// }).addTo(map4);
+
+// //map5
+// L.marker([0.0015196670060504402,0.014031394088931393], {
+//     icon: anchorIcon
+//     })
+// .addTo(map5);
+
+// L.marker([0.056622960046681214, -0.022017495301099643], {
+//     icon: anchorIcon
+//     })
+// .addTo(map5);
+
+// L.marker([0.04065845780182542,-0.048968331484701366], {
+//     icon: anchorIcon
+// }).addTo(map5);
+// L.marker([-0.014959824965174562,-0.010859505589081664], {
+//     icon: anchorIcon
+// }).addTo(map5);
+// L.marker([-0.005861771549518835,-0.04931165450807384], {
+//     icon: anchorIcon
+// }).addTo(map5);
+
+// L.marker([0.04336927814892988,-0.07112991420680714], {
+//     icon: anchorIcon
+// }).addTo(map5);
+// L.marker([0.050319891605241196,-0.0395996601149875], {
+//     icon: anchorIcon
+// }).addTo(map5);
+// L.marker([0.07958726879385836,0.007584241452605056], {
+//     icon: anchorIcon
+// }).addTo(map5);
+
+// L.marker([0.06609893394802668,0.013406712768272655], {
+//     icon: anchorIcon
+// }).addTo(map5);
+// L.marker([0.04425934246584973,0.027251302851198034], {
+//     icon: anchorIcon
+// }).addTo(map5);
+// L.marker([0.07216923205220382,0.07301060386890867], {
+//     icon: anchorIcon
+// }).addTo(map5);
+// L.marker([0.09768022207659044,0.0556329955646504], {
+//     icon: anchorIcon
+// }).addTo(map5);
+// L.marker([0.10396475518004422,0.0430902264968438], {
+//     icon: anchorIcon
+// }).addTo(map5);
+
+// //map6
+// L.marker([0.0015196670060504402,0.014031394088931393], {
+//     icon: anchorIcon
+//     })
+// .addTo(map6);
+
+// L.marker([0.056622960046681214, -0.022017495301099643], {
+//     icon: anchorIcon
+//     })
+// .addTo(map6);
+
+// L.marker([0.04065845780182542,-0.048968331484701366], {
+//     icon: anchorIcon
+// }).addTo(map6);
+// L.marker([-0.014959824965174562,-0.010859505589081664], {
+//     icon: anchorIcon
+// }).addTo(map6);
+// L.marker([-0.005861771549518835,-0.04931165450807384], {
+//     icon: anchorIcon
+// }).addTo(map6);
+
+// L.marker([0.04336927814892988,-0.07112991420680714], {
+//     icon: anchorIcon
+// }).addTo(map6);
+// L.marker([0.050319891605241196,-0.0395996601149875], {
+//     icon: anchorIcon
+// }).addTo(map6);
+// L.marker([0.07958726879385836,0.007584241452605056], {
+//     icon: anchorIcon
+// }).addTo(map6);
+
+// L.marker([0.06609893394802668,0.013406712768272655], {
+//     icon: anchorIcon
+// }).addTo(map6);
+// L.marker([0.04425934246584973,0.027251302851198034], {
+//     icon: anchorIcon
+// }).addTo(map6);
+// L.marker([0.07216923205220382,0.07301060386890867], {
+//     icon: anchorIcon
+// }).addTo(map6);
+// L.marker([0.09768022207659044,0.0556329955646504], {
+//     icon: anchorIcon
+// }).addTo(map6);
+// L.marker([0.10396475518004422,0.0430902264968438], {
+//     icon: anchorIcon
+// }).addTo(map6);
+// var currentMarker;
+// var markers = []
+var center_w = (-0.0947570803184874) + ((0.16891479468421267 - (-0.0947570803184874))/2.0)
+var center_h = (-0.08445722940064115) + ((0.15724162077680148 - (-0.08445722940064115))/2.0)
+// var heat = L.heatLayer([
+//           [5.358543576179305, 13.678096798577277, 12],
+          // [2.4306795603287568, 8.308504678941933, 15]], {radius: 30}).addTo(map1)
+// addressPoints = addressPoints.map(function (p) { return [p[0], p[1]]; });
+
+
+// attaching function on map click
+map1.on('click', onMapClick);
+
+// Script for adding marker on map click
+function onMapClick(e) {
+
+    var geojsonFeature = {
+        "type": "Feature",
+            "properties": {},
+            "geometry": {
+                "type": "Point",
+                "coordinates": [e.latlng.lat, e.latlng.lng]
+        }
+    }
+
+    var marker;
+
+    L.geoJson(geojsonFeature, {
+        
+        pointToLayer: function(feature, latlng){
+            
+            marker = L.marker(e.latlng, {
+                
+                title: "Resource Location",
+                alt: "Resource Location",
+                riseOnHover: true,
+                draggable: true,
+
+            }).bindPopup("<input type='button' value='Delete this marker' class='marker-delete-button'/>");
+
+            marker.on("popupopen", onPopupOpen);
+       
+            return marker;
+        }
+    }).addTo(map1);
+}
+
+
+// Function to handle delete as well as other events on marker popup open
+function onPopupOpen() {
+
+    var tempMarker = this;
+
+    //var tempMarkerGeoJSON = this.toGeoJSON();
+
+    //var lID = tempMarker._leaflet_id; // Getting Leaflet ID of this marker
+
+    // To remove marker on click of delete
+    $(".marker-delete-button:visible").click(function () {
+        map1.removeLayer(tempMarker);
+    });
+}
+
+
+// getting all the markers at once
+function getAllMarkers() {
+    
+    var allMarkersObjArray = [];//new Array();
+    var allMarkersGeoJsonArray = [];//new Array();
+
+    $.each(map1._layers, function (ml) {
+        //console.log(map._layers)
+        if (map1._layers[ml].feature) {
+            
+            allMarkersObjArray.push(this)
+                                    allMarkersGeoJsonArray.push(JSON.stringify(this.toGeoJSON()))
+        }
+    })
+
+    console.log(allMarkersObjArray);
+    alert("total Markers : " + allMarkersGeoJsonArray.length + "\n\n" + allMarkersGeoJsonArray + "\n\n Also see your console for object view of this array" );
+}
+
+$(".get-markers").on("click", getAllMarkers);
+
+
+// map1.on("click", function (event) {
+//     if (currentMarker) {
+//         currentMarker._icon.style.transition = "transform 0.3s ease-out";
+//         currentMarker._shadow.style.transition = "transform 0.3s ease-out";
+        
+//         currentMarker.setLatLng(event.latlng);
+        
+//         setTimeout(function () {
+//             currentMarker._icon.style.transition = null;
+//             currentMarker._shadow.style.transition = null;
+//         }, 300);
+//         return;
+//     }
+    
+//     currentMarker = L.marker(event.latlng, {
+//         draggable: true
+//     }).addTo(map1).on("click", function () {
+//         event.originalEvent.stopPropagation();
+//     });
+// });
+
+// document.getElementById("done").addEventListener("click", function () {
+//     alert(currentMarker.getLatLng());
+//     var geojsonFeature = {
+//     "type": "Feature",
+//     "properties": {},
+//     "geometry": {
+//       "type": "Point",
+//       "coordinates": [e.latlng.lat, e.latlng.lng]
+//     }}
+//     currentMarker = null;
+// });
+// var w = 0.29993293298224444*scale - (-0.1127410172131249*scale);
+//     h = 0.2396765465825439*scale - (-0.053520224662321425*scale);
+//     url = 'https://image.ibb.co/eAuMNk/ward5.png';
+
+// var southWest = map1.unproject([0, h], map1.getMaxZoom());
+// var northEast = map1.unproject([w, 0], map1.getMaxZoom());
+// var bounds = new L.LatLngBounds(southWest, northEast);
+
+// L.imageOverlay(url, bounds).addTo(map1);
+
+// map1.setMaxBounds(bounds)
+
+var imageUrl = 'http://137.132.165.139:3000/api/Maps/MD6/image'
+
+L.imageOverlay(imageUrl, new L.LatLngBounds([-0.08445722940064115, -0.0947570803184874], [0.15724162077680148, 0.16891479468421267]), { noWrap: true, maxZoom: 20, minZoom: 0}).addTo(map1);
+
+// L.imageOverlay(imageUrl, new L.LatLngBounds([-0.0947570803184874, -0.08445722940064115], [0.16891479468421267, 0.15724162077680148]), { noWrap: true, maxZoom: 20, minZoom: 0}).addTo(map2);
+
+// L.imageOverlay(imageUrl, new L.LatLngBounds([-0.0947570803184874, -0.08445722940064115], [0.16891479468421267, 0.15724162077680148]), { noWrap: true, maxZoom: 20, minZoom: 0}).addTo(map3);
+
+// L.imageOverlay(imageUrl, new L.LatLngBounds([-0.0947570803184874, -0.08445722940064115], [0.16891479468421267, 0.15724162077680148]), { noWrap: true, maxZoom: 20, minZoom: 0}).addTo(map4);
+
+// L.imageOverlay(imageUrl, new L.LatLngBounds([-0.0947570803184874, -0.08445722940064115], [0.16891479468421267, 0.15724162077680148]), { noWrap: true, maxZoom: 20, minZoom: 0}).addTo(map5);
+
+// L.imageOverlay(imageUrl, new L.LatLngBounds([-0.0947570803184874, -0.08445722940064115], [0.16891479468421267, 0.15724162077680148]), { noWrap: true, maxZoom: 20, minZoom: 0}).addTo(map6);
+
+map1.setView([center_w, center_h], 11);
+// map2.setView([center_w, center_h], 11);
+// map3.setView([center_w, center_h], 11);
+// map4.setView([center_w, center_h], 11);
+// map5.setView([center_w, center_h], 11);
+// map6.setView([center_w, center_h], 11);
+var data;
+ function handleFileSelect(evt) {
+    var file = evt.target.files[0];
+    
+    Papa.parse(file, {
+      header: true,
+      dynamicTyping: true,
+      complete: function(results) {
+        data = results;
+        produceHeatmap()
+        // uploadSecondFile()
+      }
+    });
+    
+}
+
+// function handleFileSelect2(evt) {
+//     var file2 = evt.target.files[0];
+
+//     Papa.parse(file2, {
+//       header: true,
+//       dynamicTyping: true,
+//       complete: function(results) {
+//         data2 = results;
+        // for (var row=0; row<data2['data'].length-1; row++) {
+        //     if (data2['data'][row][' ErrorDistance']!=" Not applicable") 
+        //         console.log(parseInt(data2['data'][row][' ErrorDistance']*100));
+        // }
+        // produceHeatmap()
+        // uploadThirdFile()
+//       }
+//     });
+// }
+
+// function handleFileSelect3(evt) {
+//     var file3 = evt.target.files[0];
+
+//     Papa.parse(file3, {
+//       header: true,
+//       dynamicTyping: true,
+//       complete: function(results) {
+//         data3 = results;
+        // for (var row=0; row<data2['data'].length-1; row++) {
+        //     if (data2['data'][row][' ErrorDistance']!=" Not applicable") 
+        //         console.log(parseInt(data2['data'][row][' ErrorDistance']*100));
+        // }
+        // produceHeatmap()
+//       }
+//     });
+// }
+
+// function uploadSecondFile() {
+
+//     $(document).ready(function(){
+//         $("#csv-file2").change(handleFileSelect2);
+//   });
+// }
+
+// function uploadThirdFile() {
+
+//     $(document).ready(function(){
+//         $("#csv-file3").change(handleFileSelect3);
+//   });
+// }
+
+  $(document).ready(function(){
+    $("#csv-file").change(handleFileSelect);
+  });
+
+function produceHeatmap() {
+    var checkpointArr1 = new Array(32);
+    // var checkpointArr2 = new Array(32);
+    // var checkpointArr3 = new Array(32);
+    // var checkpointArr4 = new Array(32);
+    // var checkpointArr5 = new Array(32);
+    // var checkpointArr6 = new Array(32);
+    var intensity1, intensity2, intensity3, intensity4, intensity5, intensity6;
+    console.log(data['data'])
+    for (var row=0; row<data['data'].length-1; row++) {
+        if (data['data'][row][' Device']==' b6') {
+            if (data['data'][row][' Mean Error']!=" No Mean") {
+                intensity1 = parseFloat(data['data'][row][' Mean Error'])*50;
+                checkpointArr1[row] = new Array(parseFloat(data['data'][row][' Latitude']), parseFloat(data['data'][row][' Longtitude']), intensity1);
+                console.log(checkpointArr1[row])
+        L.marker([parseFloat(data['data'][row][' Latitude']), parseFloat(data['data'][row][' Longtitude'])], {opacity:0.01}).bindLabel((intensity1/50).toFixed(3).toString(), {noHide:true, direction:'top'}).addTo(map1);
+            }
+        
+            else {
+                checkpointArr1[row] = new Array(parseFloat(data['data'][row][' Latitude']), parseFloat(data['data'][row][' Longtitude']), 0)
+            // checkpointArr2[row] = new Array(parseFloat(data['data'][row][' latitude']), parseFloat(data['data'][row][' longtitude']), 0)
+        // console.log(data['data'][row][' lat'])
+            }
+        }
+        // else if (data['data'][row][' Device']==' b2') {
+        //     if (data['data'][row][' Mean Error']!=" No Mean") {
+        //         intensity2 = parseFloat(data['data'][row][' Mean Error'])*50;
+        //         checkpointArr2[row] = new Array(parseFloat(data['data'][row][' Latitude']), parseFloat(data['data'][row][' Longtitude']), intensity2);
+        //         console.log(checkpointArr2[row])
+        // L.marker([parseFloat(data['data'][row][' Latitude']), parseFloat(data['data'][row][' Longtitude'])], {opacity:0.01}).bindLabel((intensity2/50).toFixed(3).toString(), {noHide:true, direction:'top'}).addTo(map2);
+        //     }
+        
+        //     else {
+        //         checkpointArr2[row] = new Array(parseFloat(data['data'][row][' Latitude']), parseFloat(data['data'][row][' Longtitude']), 0)
+        //     }
+        // }
+        // else if (data['data'][row][' Device']==' b3') {
+        //     if (data['data'][row][' Mean Error']!=" No Mean") {
+        //         intensity3 = parseFloat(data['data'][row][' Mean Error'])*50;
+        //         checkpointArr3[row] = new Array(parseFloat(data['data'][row][' Latitude']), parseFloat(data['data'][row][' Longtitude']), intensity3);
+        //         console.log(checkpointArr3[row])
+        // L.marker([parseFloat(data['data'][row][' Latitude']), parseFloat(data['data'][row][' Longtitude'])], {opacity:0.01}).bindLabel((intensity3/50).toFixed(3).toString(), {noHide:true, direction:'top'}).addTo(map3);
+        //     }
+        
+        //     else {
+        //         checkpointArr3[row] = new Array(parseFloat(data['data'][row][' Latitude']), parseFloat(data['data'][row][' Longtitude']), 0)
+        //     }
+        // }
+        // else if (data['data'][row][' Device']==' b4') {
+        //     if (data['data'][row][' Mean Error']!=" No Mean") {
+        //         intensity4 = parseFloat(data['data'][row][' Mean Error'])*50;
+        //         checkpointArr4[row] = new Array(parseFloat(data['data'][row][' Latitude']), parseFloat(data['data'][row][' Longtitude']), intensity4);
+        //         console.log(checkpointArr4[row])
+        // L.marker([parseFloat(data['data'][row][' Latitude']), parseFloat(data['data'][row][' Longtitude'])], {opacity:0.01}).bindLabel((intensity4/50).toFixed(3).toString(), {noHide:true, direction:'top'}).addTo(map4);
+        //     }
+        
+        //     else {
+        //         checkpointArr4[row] = new Array(parseFloat(data['data'][row][' Latitude']), parseFloat(data['data'][row][' Longtitude']), 0)
+        //     }
+        // }
+        // else if (data['data'][row][' Device']==' b5') {
+        //     if (data['data'][row][' Mean Error']!=" No Mean") {
+        //         intensity5 = parseFloat(data['data'][row][' Mean Error'])*50;
+        //         checkpointArr5[row] = new Array(parseFloat(data['data'][row][' Latitude']), parseFloat(data['data'][row][' Longtitude']), intensity5);
+        //         console.log(checkpointArr5[row])
+        // L.marker([parseFloat(data['data'][row][' Latitude']), parseFloat(data['data'][row][' Longtitude'])], {opacity:0.01}).bindLabel((intensity5/50).toFixed(3).toString(), {noHide:true, direction:'top'}).addTo(map5);
+        //     }
+        
+        //     else {
+        //         checkpointArr5[row] = new Array(parseFloat(data['data'][row][' Latitude']), parseFloat(data['data'][row][' Longtitude']), 0)
+        //     }
+        // }
+        // else if (data['data'][row][' Device']==' b6') {
+        //     if (data['data'][row][' Mean Error']!=" No Mean") {
+        //         intensity6 = parseFloat(data['data'][row][' Mean Error'])*50;
+        //         checkpointArr6[row] = new Array(parseFloat(data['data'][row][' Latitude']), parseFloat(data['data'][row][' Longtitude']), intensity6);
+        //         console.log(checkpointArr6[row])
+        // L.marker([parseFloat(data['data'][row][' Latitude']), parseFloat(data['data'][row][' Longtitude'])], {opacity:0.01}).bindLabel((intensity6/50).toFixed(3).toString(), {noHide:true, direction:'top'}).addTo(map6);
+        //     }
+        
+        //     else {
+        //         checkpointArr6[row] = new Array(parseFloat(data['data'][row][' Latitude']), parseFloat(data['data'][row][' Longtitude']), 0)
+        //     }
+        // }
+    }
+    // console.log(checkpointArr1)
+    // console.log(checkpointArr2);
+    addressPoints1 = checkpointArr1.map(function (p) { return [p[0], p[1], p[2]]; });
+    // addressPoints2 = checkpointArr2.map(function (q) { return [q[0], q[1], q[2]]; });
+    // addressPoints3 = checkpointArr3.map(function (r) { return [r[0], r[1], r[2]]; });
+    // addressPoints4 = checkpointArr4.map(function (s) { return [s[0], s[1], s[2]]; });
+    // addressPoints5 = checkpointArr5.map(function (t) { return [t[0], t[1], t[2]]; });
+    // addressPoints6 = checkpointArr6.map(function (u) { return [u[0], u[1], u[2]]; });
+    var heat1 = L.heatLayer(
+          addressPoints1, {radius: 25,
+                            gradient: {
+                                0.0: 'green',
+                                0.5: 'yellow',
+                                1.0: 'red'
+                            }
+                            }).addTo(map1);
+    // var heat2 = L.heatLayer(
+    //       addressPoints2, {radius: 25,
+    //                         gradient: {
+    //                             0.0: 'green',
+    //                             0.5: 'yellow',
+    //                             1.0: 'red'
+    //                         }
+    //                         }).addTo(map2);
+    // var heat3 = L.heatLayer(
+    //       addressPoints3, {radius: 25,
+    //                         gradient: {
+    //                             0.0: 'green',
+    //                             0.5: 'yellow',
+    //                             1.0: 'red'
+    //                         }
+    //                         }).addTo(map3);
+    // var heat4 = L.heatLayer(
+    //       addressPoints4, {radius: 25,
+    //                         gradient: {
+    //                             0.0: 'green',
+    //                             0.5: 'yellow',
+    //                             1.0: 'red'
+    //                         }
+    //                         }).addTo(map4);
+    // var heat5 = L.heatLayer(
+    //       addressPoints5, {radius: 25,
+    //                         gradient: {
+    //                             0.0: 'green',
+    //                             0.5: 'yellow',
+    //                             1.0: 'red'
+    //                         }
+    //                         }).addTo(map5);
+    // var heat6 = L.heatLayer(
+    //       addressPoints6, {radius: 25,
+    //                         gradient: {
+    //                             0.0: 'green',
+    //                             0.5: 'yellow',
+    //                             1.0: 'red'
+    //                         }
+    //                         }).addTo(map6);
+    
+
+
+}
+</script>
+
+</body>
+</html>
