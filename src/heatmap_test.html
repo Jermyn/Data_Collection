@@ -619,10 +619,10 @@ function produceHeatmap() {
     for (var row=0; row<data['data'].length-1; row++) {
         if (data['data'][row][' Device']==' b6') {
             if (data['data'][row][' Mean Error']!=" No Mean") {
-                intensity1 = parseFloat(data['data'][row][' Mean Error'])*50;
+                intensity1 = parseFloat(data['data'][row][' Mean Error'])*150;
                 checkpointArr1[row] = new Array(parseFloat(data['data'][row][' Latitude']), parseFloat(data['data'][row][' Longtitude']), intensity1);
                 console.log(checkpointArr1[row])
-        L.marker([parseFloat(data['data'][row][' Latitude']), parseFloat(data['data'][row][' Longtitude'])], {opacity:0.01}).bindLabel((intensity1/50).toFixed(3).toString(), {noHide:true, direction:'top'}).addTo(map1);
+        L.marker([parseFloat(data['data'][row][' Latitude']), parseFloat(data['data'][row][' Longtitude'])], {opacity:0.01}).bindLabel((intensity1/150).toFixed(3).toString(), {noHide:true, direction:'top'}).addTo(map1);
             }
         
             else {
